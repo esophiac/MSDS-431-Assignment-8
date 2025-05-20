@@ -1,0 +1,87 @@
+## bootstrap sampling to estimate the estimate of the standard error of the median
+
+## import packages to use
+library(boot)
+library(peakRAM)
+
+
+## estimate standard error using 100 bootstrap samples with normal distribution
+## population mean: 10, standard deviation: 5, size: 100
+set.seed(123)
+data_norm <- round(rnorm(10000, 10, 5))
+
+## create data with a left skew
+data_left <- round(rbeta(10000,5,1)*10)
+
+## create data with a right skew
+data_right <- round(rbeta(10000,1,5)*10)
+
+## list of the data to iterate through later
+data_list <- list(data_norm, data_left, data_right)
+data_type <- c("normalized", "left-skew", "right-skew")
+
+
+## create functions to use in boot to calculate mean and median
+## mean
+samplemean <- function(x, d) {
+  return(mean(x[d]))
+}
+
+## median
+samplemedian <- function(x, d) {
+  return(median(x[d]))
+}
+
+## creating a new file and writing to it
+filename='R_logs.txt'
+wd <- getwd()
+print(cat("Printing", filename, "to", wd))
+
+cat("R Log Information", file=filename, append=FALSE, sep='\n')
+
+i = 1
+
+## iterate through all of the data distributions and write the results to a file
+for (data in data_list) {
+  
+  cat("-------------", file=filename, append=TRUE, sep='\n')
+  cat("Bootstrapping for", data_type[[i]], file=filename, append=TRUE, sep='\n')
+  
+  ## calculate the RAM and time it takes for each function to run
+  mem1 <- peakRAM({
+    ## running the boot function with the data generated - mean with 100 replications
+    boot_mean <- boot(data, samplemean, R=10000)
+    calc_mean <- boot_mean$t0
+    cat("Bootstrapping Mean:", calc_mean, file=filename, append=TRUE, sep='\n')
+    calc_mean_SE <- sd(boot_mean$t)
+    cat("Bootstrapping Mean SE:", calc_mean_SE, file=filename, append=TRUE, sep='\n')
+    
+  })
+  
+  ## write RAM info to file
+  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB, file=filename, append=TRUE, sep='\n')
+  cat("Time: ", mem1$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
+  
+  
+  ## calculate the RAM and time it takes for each function to run
+  mem2 <- peakRAM({
+    ## running the boot function with the data generated - median with 100 replications
+    b_median <- boot(data, samplemedian, R=10000)
+    calc_median <- b_median$t0
+    cat("Bootstrapping Median:", calc_median, file=filename, append=TRUE, sep='\n')
+    calc_median_SE <- sd(b_median$t)
+    cat("Bootstrapping Median SE:", calc_median_SE, file=filename, append=TRUE, sep='\n')
+  })
+  
+  cat("RAM to Calculate Media and SE:", mem2$Total_RAM_Used_MiB, file=filename, append=TRUE, sep='\n')
+  cat("Time: ", mem2$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
+  
+  cat("-------------", file=filename, append=TRUE, sep='\n')
+  
+  i = i + 1
+}
+
+
+
+
+

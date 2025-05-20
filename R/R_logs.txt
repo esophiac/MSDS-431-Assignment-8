@@ -1,0 +1,61 @@
+R Log Information
+-------------
+Bootstrapping for
+normalized
+Bootstrapping Mean:
+9.9896
+Bootstrapping Mean SE:
+0.05030923
+RAM to Calculate Mean and SE:
+0.2
+Time: 
+6.11
+Bootstrapping Median:
+10
+Bootstrapping Median SE:
+0
+RAM to Calculate Media and SE:
+0.2
+Time: 
+8.31
+-------------
+-------------
+Bootstrapping for
+left-skew
+Bootstrapping Mean:
+8.3328
+Bootstrapping Mean SE:
+0.0146009
+RAM to Calculate Mean and SE:
+0
+Time: 
+6.06
+Bootstrapping Median:
+9
+Bootstrapping Median SE:
+0
+RAM to Calculate Media and SE:
+0
+Time: 
+7.94
+-------------
+-------------
+Bootstrapping for
+right-skew
+Bootstrapping Mean:
+1.6405
+Bootstrapping Mean SE:
+0.01433583
+RAM to Calculate Mean and SE:
+0
+Time: 
+6.06
+Bootstrapping Median:
+1
+Bootstrapping Median SE:
+0
+RAM to Calculate Media and SE:
+0
+Time: 
+7.84
+-------------
