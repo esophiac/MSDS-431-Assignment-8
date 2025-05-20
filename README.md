@@ -29,7 +29,14 @@ Select a cloud provider of infrastructure as a service (IaS).
 Note the cloud costs for virtual machine (compute engine) services. What percentage of cloud computing costs might be saved with a move from R to Go?
 
 ## Roles of Programs and Data
-Text
+These are the programs in the repository. Data information is in the background section.
+
+- Go
+    - main.go: runs the bootstrapping program
+- R
+    - R_logs.txt: logs for exploring the memory and time requirements of bootstrapping
+    - R_week_8.R: R file used to explore the memory and time requirements of bootstrapping
+- README.md: 
 
 ## Application
 Text
