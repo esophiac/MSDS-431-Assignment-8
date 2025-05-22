@@ -5,6 +5,7 @@ import (
 	"math/rand"
 
 	"github.com/seehuhn/mt19937"
+	"gonum.org/v1/gonum/stat"
 )
 
 // create a slice of random floats that is lngth long
@@ -49,7 +50,15 @@ func boots(floatSlice []float64, n int) (bootsResult [][]float64) {
 
 }
 
-//Compute desired statistic n times to generate a distribution of estimated statistics
+// Compute desired statistic n times to generate a distribution of estimated statistics
+func bootsMean(bootsResult [][]float64) (meanSlice []float64) {
+
+	for _, value := range bootsResult {
+		meanSlice = append(meanSlice, stat.Mean(value, nil))
+	}
+
+	return meanSlice
+}
 
 //Determine standard error/confidence interval for the bootstrapped statistic from the bootstrapped distribution
 
@@ -63,5 +72,8 @@ func main() {
 
 	newSample := boots(newSlice, 5)
 	fmt.Println(newSample)
+
+	newMean := bootsMean(newSample)
+	fmt.Println(newMean)
 
 }
