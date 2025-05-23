@@ -22,6 +22,7 @@ wd <- getwd()
 print(cat("Printing", filename, "to", wd))
 
 cat("R Log Information", file=filename, append=FALSE, sep='\n')
+cat("\n", file=filename, append=TRUE, sep='')
 
 i = 1
 
@@ -45,7 +46,7 @@ i = 1
 
 for (data in data_list) {
   print(cat("Printing for sample size = ", data_type[[i]]))
-  cat("-------------", file=filename, append=TRUE, sep=' ')
+  cat("-------------", file=filename, append=TRUE, sep='\n')
   cat("Bootstrapping for ", data_type[[i]], file=filename, append=TRUE, sep='\n')
   
   ## calculate the RAM and time it takes for each function to run
@@ -61,9 +62,9 @@ for (data in data_list) {
   
   
   ## write RAM info to file
-  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep=' ')
-  cat("Peak RAM to Calculate Mean and SE:", mem1$Peak_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep=' ')
-  cat("Time: ", mem1$Elapsed_Time_sec, file=filename, append=TRUE, sep=' ')
+  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
+  cat("Peak RAM to Calculate Mean and SE:", mem1$Peak_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
+  cat("Time: ", mem1$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
   
   ## calculate the RAM and time it takes for each function to run
   mem2 <- peakRAM({
