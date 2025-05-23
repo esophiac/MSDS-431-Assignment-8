@@ -1,4 +1,3 @@
-
 ## import packages to use
 library(boot)
 library(peakRAM)
@@ -46,38 +45,40 @@ i = 1
 
 for (data in data_list) {
   print(cat("Printing for sample size = ", data_type[[i]]))
-  cat("-------------", file=filename, append=TRUE, sep='\n')
-  cat("Bootstrapping for", data_type[[i]], file=filename, append=TRUE, sep='\n')
+  cat("-------------", file=filename, append=TRUE, sep=' ')
+  cat("Bootstrapping for", data_type[[i]], file=filename, append=TRUE, sep=' ')
   
   ## calculate the RAM and time it takes for each function to run
   mem1 <- peakRAM({
     ## running the boot function with the data generated - mean with 100 replications
     boot_mean <- boot(data, samplemean, R=100)
     calc_mean <- boot_mean$t0
-    cat("Bootstrapping Mean:", calc_mean, file=filename, append=TRUE, sep='\n')
+    cat("Bootstrapping Mean:", calc_mean, file=filename, append=TRUE, sep=' ')
     ## std error of mean = standard deviation divided by the square root of the sample size
     calc_mean_SE <- sd(boot_mean$t) / 10 	
-    cat("Bootstrapping Mean SE:", calc_mean_SE, file=filename, append=TRUE, sep='\n')
+    cat("Bootstrapping Mean SE:", calc_mean_SE, file=filename, append=TRUE, sep=' ')
   })
   
-  ## write RAM info to file
-  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
-  cat("Time: ", mem1$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
   
+  ## write RAM info to file
+  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep=' ')
+  cat("Peak RAM to Calculate Mean and SE:", mem1$Peak_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep=' ')
+  cat("Time: ", mem1$Elapsed_Time_sec, file=filename, append=TRUE, sep=' ')
   
   ## calculate the RAM and time it takes for each function to run
   mem2 <- peakRAM({
     ## running the boot function with the data generated - median with 100 replications
     b_median <- boot(data, samplemedian, R=100)
     calc_median <- b_median$t0
-    cat("Bootstrapping Median:", calc_median, file=filename, append=TRUE, sep='\n')
-    calc_median_SE <- sd(b_median$t) ## this may need to be checked
-    cat("Bootstrapping Median SE:", calc_median_SE, file=filename, append=TRUE, sep='\n')
+    cat("Bootstrapping Median:", calc_median, file=filename, append=TRUE, sep=' ')
+    calc_median_SE <- sd(b_median$t) / 10
+    cat("Bootstrapping Median SE:", calc_median_SE, file=filename, append=TRUE, sep=' ')
   })
   
   ## write RAM info to file
-  cat("RAM to Calculate Media and SE:", mem2$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
-  cat("Time: ", mem2$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
+  cat("RAM to Calculate Media and SE:", mem2$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep=' ')
+  cat("Peak RAM to Calculate Media and SE:", mem2$Peak_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep=' ')
+  cat("Time: ", mem2$Elapsed_Time_sec, file=filename, append=TRUE, sep=' ')
   
   cat("-------------", file=filename, append=TRUE, sep='\n')
   
@@ -98,28 +99,26 @@ for (size in sample_size) {
   ## select a new boot size
   for (numb in num_boots) {
     ## new entry in log
-    cat("Sample size:", size, "Number of Boot Samples:", numb, file=filename, append=TRUE, sep='\n')
+    cat("Sample size:", size, "Number of Boot Samples:", numb, file=filename, append=TRUE, sep=' ')
     
     mem3 <- peakRAM({
       ## running the boot function with the data generated - median with numb replications
       b_median <- boot(data, samplemedian, R=numb)
       calc_median <- b_median$t0
-      cat("Bootstrapping Median:", calc_median, file=filename, append=TRUE, sep='\n')
-      calc_median_SE <- sd(b_median$t) ## this may need to be checked
-      cat("Bootstrapping Median SE:", calc_median_SE, file=filename, append=TRUE, sep='\n')
+      cat("Bootstrapping Median:", calc_median, file=filename, append=TRUE, sep=' ')
+      calc_median_SE <- sd(b_median$t) / sqrt(size) 
+      cat("Bootstrapping Median SE:", calc_median_SE, file=filename, append=TRUE, sep=' ')
     })
     
     ## write RAM info to file
-    cat("RAM to Calculate Median and SE:", mem2$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
-    cat("Time: ", mem2$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
+    cat("RAM to Calculate Median and SE:", mem3$Total_RAM_Used_MiB, file=filename, append=TRUE, sep=' ')
+    cat("Peak RAM to Calculate Median and SE:", mem3$Peak_RAM_Used_MiB, file=filename, append=TRUE, sep=' ')
+    cat("Time: ", mem3$Elapsed_Time_sec, file=filename, append=TRUE, sep=' ')
     
-    cat("-------------", file=filename, append=TRUE, sep='\n')
+    cat("-------------", file=filename, append=TRUE, sep=' ')
     
   }
   
 }
 
 print(cat("Printing", filename, "to", wd))
-
-
-

@@ -8,14 +8,18 @@ Bootstrapping Mean SE:
 0.04506085
 RAM to Calculate Mean and SE:
 0
+Peak RAM to Calculate Mean and SE:
+209715.2
 Time: 
 0
 Bootstrapping Median:
 10
 Bootstrapping Median SE:
-0.6566674
+0.06566674
 RAM to Calculate Media and SE:
 -838860.8
+Peak RAM to Calculate Media and SE:
+419430.4
 Time: 
 0
 -------------
@@ -28,16 +32,20 @@ Bootstrapping Mean SE:
 0.01433219
 RAM to Calculate Mean and SE:
 0
+Peak RAM to Calculate Mean and SE:
+209715.2
 Time: 
 0
 Bootstrapping Median:
 8
 Bootstrapping Median SE:
-0.4380858
+0.04380858
 RAM to Calculate Media and SE:
 0
+Peak RAM to Calculate Media and SE:
+419430.4
 Time: 
-0.02
+0
 -------------
 -------------
 Bootstrapping for
@@ -48,16 +56,20 @@ Bootstrapping Mean SE:
 0.01382058
 RAM to Calculate Mean and SE:
 0
+Peak RAM to Calculate Mean and SE:
+209715.2
 Time: 
-0
+0.01
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1836774
+0.01836774
 RAM to Calculate Media and SE:
 0
+Peak RAM to Calculate Media and SE:
+419430.4
 Time: 
-0.02
+0.01
 -------------
 Sample size:
 100
@@ -66,11 +78,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1777383
+0.01777383
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+0.4
 Time: 
-0.02
+0
 -------------
 Sample size:
 100
@@ -79,11 +93,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1437721
+0.01437721
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+4
 Time: 
-0.02
+0.04
 -------------
 Sample size:
 100
@@ -92,11 +108,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1764729
+0.01764729
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+12.2
 Time: 
-0.02
+0.25
 -------------
 Sample size:
 100
@@ -105,11 +123,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.17663
+0.017663
 RAM to Calculate Median and SE:
-0
+0.7
+Peak RAM to Calculate Median and SE:
+47.3
 Time: 
-0.02
+2.5
 -------------
 Sample size:
 1000
@@ -118,11 +138,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1113508
+0.00352122
 RAM to Calculate Median and SE:
-0
+-0.7
+Peak RAM to Calculate Median and SE:
+0.4
 Time: 
-0.02
+0
 -------------
 Sample size:
 1000
@@ -131,9 +153,11 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1404189
+0.004440436
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+4
 Time: 
 0.02
 -------------
@@ -144,11 +168,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1765539
+0.005583126
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+12.2
 Time: 
-0.02
+0.25
 -------------
 Sample size:
 1000
@@ -157,11 +183,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1766421
+0.005585914
 RAM to Calculate Median and SE:
-0
+0.7
+Peak RAM to Calculate Median and SE:
+47.3
 Time: 
-0.02
+2.5
 -------------
 Sample size:
 10000
@@ -170,11 +198,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1969464
+0.001969464
 RAM to Calculate Median and SE:
-0
+-0.8
+Peak RAM to Calculate Median and SE:
+0.4
 Time: 
-0.02
+0
 -------------
 Sample size:
 10000
@@ -183,11 +213,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1413895
+0.001413895
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+4
 Time: 
-0.02
+0.01
 -------------
 Sample size:
 10000
@@ -196,11 +228,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1774605
+0.001774605
 RAM to Calculate Median and SE:
-0
+0.1
+Peak RAM to Calculate Median and SE:
+12.2
 Time: 
-0.02
+0.25
 -------------
 Sample size:
 10000
@@ -209,11 +243,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1767695
+0.001767695
 RAM to Calculate Median and SE:
-0
+0.7
+Peak RAM to Calculate Median and SE:
+47.2
 Time: 
-0.02
+2.49
 -------------
 Sample size:
 1e+05
@@ -222,11 +258,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1305582
+0.0004128614
 RAM to Calculate Median and SE:
-0
+-0.8
+Peak RAM to Calculate Median and SE:
+0.4
 Time: 
-0.02
+0
 -------------
 Sample size:
 1e+05
@@ -235,11 +273,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1555094
+0.000491764
 RAM to Calculate Median and SE:
 0
+Peak RAM to Calculate Median and SE:
+4
 Time: 
-0.02
+0.03
 -------------
 Sample size:
 1e+05
@@ -248,11 +288,13 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.17786
+0.0005624426
 RAM to Calculate Median and SE:
-0
+0.1
+Peak RAM to Calculate Median and SE:
+12.2
 Time: 
-0.02
+0.25
 -------------
 Sample size:
 1e+05
@@ -261,9 +303,12 @@ Number of Boot Samples:
 Bootstrapping Median:
 1
 Bootstrapping Median SE:
-0.1776308
+0.0005617178
 RAM to Calculate Median and SE:
-0
+0.7
+Peak RAM to Calculate Median and SE:
+47.2
 Time: 
-0.02
+2.45
+-------------
 -------------
