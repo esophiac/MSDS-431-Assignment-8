@@ -15,7 +15,7 @@ Bootstrapping Median:
 Bootstrapping Median SE:
 0.6566674
 RAM to Calculate Media and SE:
--0.7
+-838860.8
 Time: 
 0
 -------------
@@ -29,7 +29,7 @@ Bootstrapping Mean SE:
 RAM to Calculate Mean and SE:
 0
 Time: 
-0.01
+0
 Bootstrapping Median:
 8
 Bootstrapping Median SE:
@@ -37,7 +37,7 @@ Bootstrapping Median SE:
 RAM to Calculate Media and SE:
 0
 Time: 
-0
+0.02
 -------------
 -------------
 Bootstrapping for
@@ -57,7 +57,7 @@ Bootstrapping Median SE:
 RAM to Calculate Media and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 100
@@ -70,7 +70,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 100
@@ -83,7 +83,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 100
@@ -96,7 +96,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 100
@@ -109,7 +109,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1000
@@ -122,7 +122,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1000
@@ -135,7 +135,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1000
@@ -148,7 +148,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1000
@@ -161,7 +161,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 10000
@@ -174,7 +174,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 10000
@@ -187,7 +187,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 10000
@@ -200,7 +200,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 10000
@@ -213,7 +213,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1e+05
@@ -226,7 +226,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1e+05
@@ -239,7 +239,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1e+05
@@ -252,7 +252,7 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------
 Sample size:
 1e+05
@@ -265,5 +265,5 @@ Bootstrapping Median SE:
 RAM to Calculate Median and SE:
 0
 Time: 
-0
+0.02
 -------------

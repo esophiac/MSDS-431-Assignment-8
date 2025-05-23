@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math"
 	"math/rand"
+	"os"
 	"runtime"
 	"sort"
 
@@ -101,6 +103,24 @@ func medianSE(medianSlice []float64) (seMedian float64) {
 
 }
 
+// Write a string to a specific file
+func writeLine(newText string, filePath string) error {
+	f, err := os.OpenFile(filePath, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
+
+	if err != nil {
+		return err
+	}
+
+	writer := bufio.NewWriter(f)
+
+	writer.WriteString(newText)
+	writer.WriteString("\n")
+
+	writer.Flush()
+
+	return nil
+}
+
 //Determine standard error/confidence interval for the bootstrapped statistic from the bootstrapped distribution
 
 func main() {
@@ -108,23 +128,42 @@ func main() {
 	// create a random generator to use in all the functions
 	rand.New(mt19937.New())
 
-	//var sample_size = []int{100, 1000, 10000, 100000}
+	var sample_size = []int{100, 1000, 10000, 100000}
 
-	//var num_boots = []int{100, 1000, 10000, 100000}
+	var num_boots = []int{100, 1000, 10000, 100000}
 
-	var m1, m2 runtime.MemStats
-	runtime.GC()
-	runtime.ReadMemStats(&m1)
+	for _, sample := range sample_size {
 
-	testSlice := randSlice(100, 10)
-	testSampled := sampledSlice(testSlice)
-	testBoots := boots(testSampled, 100)
-	testMedians := bootsMedian(testBoots)
-	testSE := medianSE(testMedians)
-	fmt.Println("Median SE:", testSE)
+		for _, nums := range num_boots {
 
-	runtime.ReadMemStats(&m2)
-	fmt.Println("total:", m2.TotalAlloc-m1.TotalAlloc)
-	fmt.Println("mallocs:", m2.Mallocs-m1.Mallocs)
+			fmt.Println("processing %v size and %v boot samples", sample, nums)
+
+			var m1, m2 runtime.MemStats
+			runtime.GC()
+			runtime.ReadMemStats(&m1)
+
+			testSlice := randSlice(sample, 10)
+			testBoots := boots(testSlice, nums)
+			testMedians := bootsMedian(testBoots)
+			testSE := medianSE(testMedians)
+
+			runtime.ReadMemStats(&m2)
+
+			line1 := "Sample Size: " + string(sample) + " Boot Samples: " + string(nums) + "\n"
+			writeLine(line1, "Go_result_log.txt")
+
+			line2 := "Median Standard Error: " + string(int64(testSE))
+			writeLine(line2, "Go_result_log.txt")
+
+			line3 := "Cumulative Bytes Allocated: " + string(m2.TotalAlloc-m1.TotalAlloc)
+			writeLine(line3, "Go_result_log.txt")
+
+			line4 := "Cumulative Heap Objects Allocated: " + string(m2.Mallocs-m1.Mallocs)
+			writeLine(line4, "Go_result_log.txt")
+
+		}
+	}
+
+	fmt.Println("processing complete")
 
 }

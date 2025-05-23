@@ -61,7 +61,7 @@ for (data in data_list) {
   })
   
   ## write RAM info to file
-  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB, file=filename, append=TRUE, sep='\n')
+  cat("RAM to Calculate Mean and SE:", mem1$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
   cat("Time: ", mem1$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
   
   
@@ -76,7 +76,7 @@ for (data in data_list) {
   })
   
   ## write RAM info to file
-  cat("RAM to Calculate Media and SE:", mem2$Total_RAM_Used_MiB, file=filename, append=TRUE, sep='\n')
+  cat("RAM to Calculate Media and SE:", mem2$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
   cat("Time: ", mem2$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
   
   cat("-------------", file=filename, append=TRUE, sep='\n')
@@ -110,7 +110,7 @@ for (size in sample_size) {
     })
     
     ## write RAM info to file
-    cat("RAM to Calculate Median and SE:", mem2$Total_RAM_Used_MiB, file=filename, append=TRUE, sep='\n')
+    cat("RAM to Calculate Median and SE:", mem2$Total_RAM_Used_MiB*(1048576), file=filename, append=TRUE, sep='\n')
     cat("Time: ", mem2$Elapsed_Time_sec, file=filename, append=TRUE, sep='\n')
     
     cat("-------------", file=filename, append=TRUE, sep='\n')
