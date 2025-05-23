@@ -100,7 +100,7 @@ for (size in sample_size) {
   ## select a new boot size
   for (numb in num_boots) {
     ## new entry in log
-    cat("Sample size:", size, "Number of Boot Samples:", numb, file=filename, append=TRUE, sep=' ')
+    cat("Sample size:", size, "Number of Boot Samples:", numb, file=filename, append=TRUE, sep='\n')
     
     mem3 <- peakRAM({
       ## running the boot function with the data generated - median with numb replications
