@@ -8,6 +8,7 @@ import (
 	"os"
 	"runtime"
 	"sort"
+	"time"
 
 	"github.com/seehuhn/mt19937"
 	"gonum.org/v1/gonum/stat"
@@ -128,15 +129,21 @@ func main() {
 	// create a random generator to use in all the functions
 	rand.New(mt19937.New())
 
-	var sample_size = []int{100, 1000, 10000, 100000}
+	var sample_size = []int{10, 100, 1000, 10000}
 
-	var num_boots = []int{100, 1000, 10000, 100000}
+	var num_boots = []int{10, 100, 1000, 10000}
 
 	for _, sample := range sample_size {
 
 		for _, nums := range num_boots {
 
-			fmt.Println("processing %v size and %v boot samples", sample, nums)
+			writeLine("-------------", "Go_result_log.txt")
+
+			title := fmt.Sprintf("processing %v size and %v boot samples", sample, nums)
+			writeLine(title, "Go_result_log.txt")
+			fmt.Println(title)
+
+			start := time.Now()
 
 			var m1, m2 runtime.MemStats
 			runtime.GC()
@@ -149,17 +156,26 @@ func main() {
 
 			runtime.ReadMemStats(&m2)
 
-			line1 := "Sample Size: " + string(sample) + " Boot Samples: " + string(nums) + "\n"
+			elapsed := time.Since(start)
+
+			line1 := fmt.Sprintf("Sample Size: %v Boot Samples: %v", sample, nums)
 			writeLine(line1, "Go_result_log.txt")
 
-			line2 := "Median Standard Error: " + string(int64(testSE))
+			line2 := fmt.Sprintf("Median Standard Error:  %v", testSE)
 			writeLine(line2, "Go_result_log.txt")
 
-			line3 := "Cumulative Bytes Allocated: " + string(m2.TotalAlloc-m1.TotalAlloc)
+			totAlloc := m2.TotalAlloc - m1.TotalAlloc
+			line3 := fmt.Sprintf("Cumulative Bytes Allocated: %v", totAlloc)
 			writeLine(line3, "Go_result_log.txt")
 
-			line4 := "Cumulative Heap Objects Allocated: " + string(m2.Mallocs-m1.Mallocs)
+			heapObj := m2.Mallocs - m1.Mallocs
+			line4 := fmt.Sprintf("Cumulative Heap Objects Allocated: %v", heapObj)
 			writeLine(line4, "Go_result_log.txt")
+
+			line5 := fmt.Sprintf("Time to Compute: %v", elapsed)
+			writeLine(line5, "Go_result_log.txt")
+
+			writeLine("-------------", "Go_result_log.txt")
 
 		}
 	}

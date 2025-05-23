@@ -1,0 +1,314 @@
+-------------
+processing 10 size and 10 boot samples
+Sample Size: 10 Boot Samples: 10
+Median Standard Error:  0.5416025603090641
+Cumulative Bytes Allocated: 4144
+Cumulative Heap Objects Allocated: 75
+Time to Compute: 1.8095ms
+-------------
+-------------
+processing 10 size and 100 boot samples
+Sample Size: 10 Boot Samples: 100
+Median Standard Error:  0.06633249580710796
+Cumulative Bytes Allocated: 34616
+Cumulative Heap Objects Allocated: 521
+Time to Compute: 524.2µs
+-------------
+-------------
+processing 10 size and 1000 boot samples
+Sample Size: 10 Boot Samples: 1000
+Median Standard Error:  0.06068411292555536
+Cumulative Bytes Allocated: 332824
+Cumulative Heap Objects Allocated: 5028
+Time to Compute: 1.0433ms
+-------------
+-------------
+processing 100 size and 10 boot samples
+Sample Size: 100 Boot Samples: 10
+Median Standard Error:  0.1795054935711501
+Cumulative Bytes Allocated: 23432
+Cumulative Heap Objects Allocated: 98
+Time to Compute: 0s
+-------------
+-------------
+processing 100 size and 100 boot samples
+Sample Size: 100 Boot Samples: 100
+Median Standard Error:  0.07479939501726934
+Cumulative Bytes Allocated: 215624
+Cumulative Heap Objects Allocated: 825
+Time to Compute: 2.8319ms
+-------------
+-------------
+processing 100 size and 1000 boot samples
+Sample Size: 100 Boot Samples: 1000
+Median Standard Error:  0.017287418976089413
+Cumulative Bytes Allocated: 2126616
+Cumulative Heap Objects Allocated: 8031
+Time to Compute: 16.6395ms
+-------------
+-------------
+processing 1000 size and 10 boot samples
+Sample Size: 1000 Boot Samples: 10
+Median Standard Error:  0.1632993161855452
+Cumulative Bytes Allocated: 278280
+Cumulative Heap Objects Allocated: 142
+Time to Compute: 2.9992ms
+-------------
+-------------
+processing 1000 size and 100 boot samples
+Sample Size: 1000 Boot Samples: 100
+Median Standard Error:  0.02564323999762429
+Cumulative Bytes Allocated: 2555576
+Cumulative Heap Objects Allocated: 1228
+Time to Compute: 8.3611ms
+-------------
+-------------
+processing 1000 size and 1000 boot samples
+Sample Size: 1000 Boot Samples: 1000
+Median Standard Error:  0.011657267771304434
+Cumulative Bytes Allocated: 25328120
+Cumulative Heap Objects Allocated: 12047
+Time to Compute: 56.4516ms
+-------------
+-------------
+processing 100 size and 100 boot samples
+Sample Size: 100 Boot Samples: 100
+Median Standard Error:  0.04605661864718386
+Cumulative Bytes Allocated: 216032
+Cumulative Heap Objects Allocated: 834
+Time to Compute: 1.7763ms
+-------------
+-------------
+processing 100 size and 1000 boot samples
+Sample Size: 100 Boot Samples: 1000
+Median Standard Error:  0.01593376555886547
+Cumulative Bytes Allocated: 2131672
+Cumulative Heap Objects Allocated: 8036
+Time to Compute: 5.0239ms
+-------------
+-------------
+processing 100 size and 10000 boot samples
+Sample Size: 100 Boot Samples: 10000
+Median Standard Error:  0.006767339483753291
+Cumulative Bytes Allocated: 21741656
+Cumulative Heap Objects Allocated: 80050
+Time to Compute: 40.3437ms
+-------------
+-------------
+processing 100 size and 100000 boot samples
+Sample Size: 100 Boot Samples: 100000
+Median Standard Error:  0.0020519917170139608
+Cumulative Bytes Allocated: 221083576
+Cumulative Heap Objects Allocated: 800075
+Time to Compute: 345.2657ms
+-------------
+-------------
+processing 1000 size and 100 boot samples
+Sample Size: 1000 Boot Samples: 100
+Median Standard Error:  0.04943110704237102
+Cumulative Bytes Allocated: 2555576
+Cumulative Heap Objects Allocated: 1228
+Time to Compute: 7.5021ms
+-------------
+-------------
+processing 1000 size and 1000 boot samples
+Sample Size: 1000 Boot Samples: 1000
+Median Standard Error:  0.0073351758537068225
+Cumulative Bytes Allocated: 25318136
+Cumulative Heap Objects Allocated: 12039
+Time to Compute: 29.3607ms
+-------------
+-------------
+processing 1000 size and 10000 boot samples
+Sample Size: 1000 Boot Samples: 10000
+Median Standard Error:  0.004642996849231874
+Cumulative Bytes Allocated: 253439960
+Cumulative Heap Objects Allocated: 120052
+Time to Compute: 274.4195ms
+-------------
+-------------
+processing 1000 size and 100000 boot samples
+Sample Size: 1000 Boot Samples: 100000
+Median Standard Error:  0.0007971245781411019
+Cumulative Bytes Allocated: 2537901976
+Cumulative Heap Objects Allocated: 1200077
+Time to Compute: 3.0305332s
+-------------
+-------------
+processing 10000 size and 100 boot samples
+Sample Size: 10000 Boot Samples: 100
+Median Standard Error:  0.050211673156867795
+Cumulative Bytes Allocated: 36129624
+Cumulative Heap Objects Allocated: 1935
+Time to Compute: 45.7876ms
+-------------
+-------------
+processing 10000 size and 1000 boot samples
+Sample Size: 10000 Boot Samples: 1000
+Median Standard Error:  0.012181436179177918
+Cumulative Bytes Allocated: 358066600
+Cumulative Heap Objects Allocated: 19045
+Time to Compute: 260.1244ms
+-------------
+-------------
+processing 10000 size and 10000 boot samples
+Sample Size: 10000 Boot Samples: 10000
+Median Standard Error:  0.004998833647340377
+Cumulative Bytes Allocated: 3577932504
+Cumulative Heap Objects Allocated: 190057
+Time to Compute: 2.7168025s
+-------------
+-------------
+processing 10000 size and 100000 boot samples
+Sample Size: 10000 Boot Samples: 100000
+Median Standard Error:  0.0015599953637297393
+Cumulative Bytes Allocated: 35779829544
+Cumulative Heap Objects Allocated: 1900077
+Time to Compute: 54.316923s
+-------------
+-------------
+processing 100000 size and 100 boot samples
+Sample Size: 100000 Boot Samples: 100
+Median Standard Error:  0.04975698519562425
+Cumulative Bytes Allocated: 414258344
+Cumulative Heap Objects Allocated: 2859
+Time to Compute: 349.9055ms
+-------------
+-------------
+processing 100000 size and 1000 boot samples
+Sample Size: 100000 Boot Samples: 1000
+Median Standard Error:  0.01578268332993762
+Cumulative Bytes Allocated: 4105554152
+Cumulative Heap Objects Allocated: 28051
+Time to Compute: 3.8602347s
+-------------
+-------------
+processing 100000 size and 10000 boot samples
+-------------
+processing 10 size and 10 boot samples
+Sample Size: 10 Boot Samples: 10
+Median Standard Error:  0.6146362971528591
+Cumulative Bytes Allocated: 4192
+Cumulative Heap Objects Allocated: 77
+Time to Compute: 1.8375ms
+-------------
+-------------
+processing 10 size and 100 boot samples
+Sample Size: 10 Boot Samples: 100
+Median Standard Error:  0.22797084697545653
+Cumulative Bytes Allocated: 34616
+Cumulative Heap Objects Allocated: 521
+Time to Compute: 1.1437ms
+-------------
+-------------
+processing 10 size and 1000 boot samples
+Sample Size: 10 Boot Samples: 1000
+Median Standard Error:  0.05809798082012261
+Cumulative Bytes Allocated: 332824
+Cumulative Heap Objects Allocated: 5028
+Time to Compute: 2.4824ms
+-------------
+-------------
+processing 10 size and 10000 boot samples
+Sample Size: 10 Boot Samples: 10000
+Median Standard Error:  0.022310513662889993
+Cumulative Bytes Allocated: 3819800
+Cumulative Heap Objects Allocated: 50047
+Time to Compute: 11.638ms
+-------------
+-------------
+processing 100 size and 10 boot samples
+Sample Size: 100 Boot Samples: 10
+Median Standard Error:  0.2581988897471611
+Cumulative Bytes Allocated: 23432
+Cumulative Heap Objects Allocated: 98
+Time to Compute: 797.3µs
+-------------
+-------------
+processing 100 size and 100 boot samples
+Sample Size: 100 Boot Samples: 100
+Median Standard Error:  0.05842201051942079
+Cumulative Bytes Allocated: 215608
+Cumulative Heap Objects Allocated: 824
+Time to Compute: 1.7583ms
+-------------
+-------------
+processing 100 size and 1000 boot samples
+Sample Size: 100 Boot Samples: 1000
+Median Standard Error:  0.015328109829687093
+Cumulative Bytes Allocated: 2126616
+Cumulative Heap Objects Allocated: 8031
+Time to Compute: 8.0652ms
+-------------
+-------------
+processing 100 size and 10000 boot samples
+Sample Size: 100 Boot Samples: 10000
+Median Standard Error:  0.006695942246186186
+Cumulative Bytes Allocated: 21736584
+Cumulative Heap Objects Allocated: 80045
+Time to Compute: 42.1845ms
+-------------
+-------------
+processing 1000 size and 10 boot samples
+Sample Size: 1000 Boot Samples: 10
+Median Standard Error:  0.1333333333333333
+Cumulative Bytes Allocated: 278280
+Cumulative Heap Objects Allocated: 142
+Time to Compute: 0s
+-------------
+-------------
+processing 1000 size and 100 boot samples
+Sample Size: 1000 Boot Samples: 100
+Median Standard Error:  0.03684529491774709
+Cumulative Bytes Allocated: 2555576
+Cumulative Heap Objects Allocated: 1228
+Time to Compute: 3.0205ms
+-------------
+-------------
+processing 1000 size and 1000 boot samples
+Sample Size: 1000 Boot Samples: 1000
+Median Standard Error:  0.008384169266796398
+Cumulative Bytes Allocated: 25323000
+Cumulative Heap Objects Allocated: 12043
+Time to Compute: 29.3208ms
+-------------
+-------------
+processing 1000 size and 10000 boot samples
+Sample Size: 1000 Boot Samples: 10000
+Median Standard Error:  0.0048839739270531615
+Cumulative Bytes Allocated: 253444920
+Cumulative Heap Objects Allocated: 120055
+Time to Compute: 304.6281ms
+-------------
+-------------
+processing 10000 size and 10 boot samples
+Sample Size: 10000 Boot Samples: 10
+Median Standard Error:  0.15275252316519466
+Cumulative Bytes Allocated: 3934872
+Cumulative Heap Objects Allocated: 219
+Time to Compute: 5.0968ms
+-------------
+-------------
+processing 10000 size and 100 boot samples
+Sample Size: 10000 Boot Samples: 100
+Median Standard Error:  0.049020713000019714
+Cumulative Bytes Allocated: 36129640
+Cumulative Heap Objects Allocated: 1935
+Time to Compute: 27.1681ms
+-------------
+-------------
+processing 10000 size and 1000 boot samples
+Sample Size: 10000 Boot Samples: 1000
+Median Standard Error:  0.004089954489689087
+Cumulative Bytes Allocated: 358066408
+Cumulative Heap Objects Allocated: 19043
+Time to Compute: 267.0512ms
+-------------
+-------------
+processing 10000 size and 10000 boot samples
+Sample Size: 10000 Boot Samples: 10000
+Median Standard Error:  0.004562451708956697
+Cumulative Bytes Allocated: 3577932584
+Cumulative Heap Objects Allocated: 190058
+Time to Compute: 2.9894394s
+-------------
