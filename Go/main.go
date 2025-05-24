@@ -39,8 +39,8 @@ func sampledSlice(inital []float64) (final []float64) {
 	return final
 }
 
-// Resample the data with replacement n times
-func boots(floatSlice []float64, n int) (bootsResult [][]float64) {
+// Resample the data with replacement n times and send with a channel
+func boots(ch chan []float64, floatSlice []float64, n int) {
 
 	for i := 0; i < n; i++ {
 
@@ -48,12 +48,9 @@ func boots(floatSlice []float64, n int) (bootsResult [][]float64) {
 		sample := sampledSlice(floatSlice)
 
 		// add it to the result
-		bootsResult = append(bootsResult, sample)
-
+		ch <- sample
 	}
-
-	return bootsResult
-
+	close(ch)
 }
 
 // Compute mean n times to generate a distribution of estimated statistics
@@ -78,11 +75,12 @@ func median(sliceFloats []float64) (medianVal float64) {
 }
 
 // Compute median n times to generate a distribution of estimated statistics
-func bootsMedian(bootsResult [][]float64) (medianSlice []float64) {
+// Receivedd channel
+func bootsMedian(ch chan []float64) (medianSlice []float64) {
 
-	for _, value := range bootsResult {
+	for data := range ch {
 
-		medianVal := median(value)
+		medianVal := median(data)
 		medianSlice = append(medianSlice, medianVal)
 	}
 
@@ -122,8 +120,6 @@ func writeLine(newText string, filePath string) error {
 	return nil
 }
 
-//Determine standard error/confidence interval for the bootstrapped statistic from the bootstrapped distribution
-
 func main() {
 
 	// create a random generator to use in all the functions
@@ -149,9 +145,11 @@ func main() {
 			runtime.GC()
 			runtime.ReadMemStats(&m1)
 
+			dataChannel := make(chan []float64)
+
 			testSlice := randSlice(sample, 10)
-			testBoots := boots(testSlice, nums)
-			testMedians := bootsMedian(testBoots)
+			go boots(dataChannel, testSlice, nums)
+			testMedians := bootsMedian(dataChannel)
 			testSE := medianSE(testMedians)
 
 			runtime.ReadMemStats(&m2)

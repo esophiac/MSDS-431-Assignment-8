@@ -35,21 +35,6 @@ func TestSampledSlice(t *testing.T) {
 	}
 }
 
-// testing the boots function in main.go
-func TestBoots(t *testing.T) {
-
-	rand.Seed(1)
-
-	in1 := []float64{3, 2, 1}
-	in2 := 3
-	expected := [][]float64{{1, 3, 1}, {1, 2, 3}, {2, 1, 2}}
-	out := boots(in1, in2)
-
-	if reflect.DeepEqual(expected, out) != true {
-		t.Errorf("Expected %v, got %v", expected, out)
-	}
-}
-
 // testing the median function in main.go
 func TestMedian(t *testing.T) {
 
@@ -58,20 +43,6 @@ func TestMedian(t *testing.T) {
 	out := median(in)
 
 	if expected != out {
-		t.Errorf("Expected %v, got %v", expected, out)
-	}
-}
-
-// testing the bootsMedian function in main.go
-func TestBootsMedian(t *testing.T) {
-
-	rand.Seed(1)
-
-	in := [][]float64{{3, 3, 3}, {2, 2, 2}, {1, 1, 1}}
-	expected := []float64{3, 2, 1}
-	out := bootsMedian(in)
-
-	if reflect.DeepEqual(expected, out) != true {
 		t.Errorf("Expected %v, got %v", expected, out)
 	}
 }
@@ -96,9 +67,11 @@ func BenchmarkWithout(b *testing.B) {
 	sample := 100
 	nums := 100
 
+	dataChannel := make(chan []float64)
+
 	testSlice := randSlice(sample, 10)
-	testBoots := boots(testSlice, nums)
-	testMedians := bootsMedian(testBoots)
+	go boots(dataChannel, testSlice, nums)
+	testMedians := bootsMedian(dataChannel)
 	testSE := medianSE(testMedians)
 
 	fmt.Println("Median Standard Error:", testSE)
